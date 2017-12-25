@@ -55,7 +55,7 @@ void processImage(int, void*)
 
 int main (int argc, char* argv[])
 {
-   // Verifica se o número de parâmetros necessário foi informado
+   // Verify the number of arguments
    if (argc < 2)
    {
      std::cout << "> You need to provide an image as parameter" << std::endl;
