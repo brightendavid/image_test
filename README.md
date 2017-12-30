@@ -2,7 +2,7 @@
 
 Relevant Information:
 
--Required libraries and packages:
+Required libraries and packages:
  - opencv 2.4
  - cython 0.27
  - python 2.7 or above
