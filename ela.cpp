@@ -1,4 +1,5 @@
 #include <opencv2/highgui/highgui.hpp>
+//#include <opencv>
 #include <iostream>
 #include <vector> 
 #include "ela.hpp"
@@ -17,14 +18,14 @@ void processImage(int, void*)
    std::vector<int> parameters;
    parameters.push_back(CV_IMWRITE_JPEG_QUALITY);
    parameters.push_back(quality);
-   cv::imwrite("lena.jpeg", input_image, parameters);
+   cv::imwrite("temp.jpeg", input_image, parameters);
 
    // Reading temp image from the disk
-   compressed_image = cv::imread("lena.jpeg");
+   compressed_image = cv::imread("temp.jpeg");
 
    if (compressed_image.empty())
    {
-      std::cout << "> Error loading temp image" << std::endl;
+      std::cout << " Error loading  image" << std::endl;
       exit(EXIT_FAILURE);
    }
 

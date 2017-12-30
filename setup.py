@@ -9,11 +9,11 @@ setup(
     # The ext modules interface the cpp code with the python one:
     ext_modules=[
         Extension("ela",
-            sources=["elawrapper.pyx", "ela_c.cpp"], # Note, you can link against a c++ library instead of including the source
+            sources=["elawrapper.pyx", "ela.cpp"], # Note, you can link against a c++ library instead of including the source
             include_dirs=[".","source" , "/usr/local/include/opencv", "/usr/local/include"],
             language="c++",
-            library_dirs=['/usr/local/lib', 'source'],
-            libraries=['opencv_core'])
+            library_dirs=['/usr/local/lib', 'source', '/usr/lib', '/lib'],
+            libraries=['opencv_core', 'opencv_highgui'])
     ],
     cmdclass = {'build_ext': build_ext},
 )
